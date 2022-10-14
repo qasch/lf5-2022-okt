@@ -4,8 +4,24 @@ print("Ausgabe über den Builtin print()")
 # Eingabe
 # Der Variablen zahl wird das Ergebnis des Aufrufs
 # der Funktion input() zugewiesen
-zahl1 = int(input("Bitte gib eine Zahl ein: "))
-zahl2 = int(input("Bitte gib eine weitere Zahl ein: "))
+zahl1 = input("Bitte gib eine Zahl ein: ")
+zahl2 = input("Bitte gib eine weitere Zahl ein: ")
+
+# falls zahl1 eine Ziffer ist, wandle die Ziffer in ein int um
+# ansonsten: _______
+
+#      True        and     True
+#                  True
+# TODO: Wir haben keine isfloat() Methode zur Prüfung auf Gleitkommazahl
+# TODO: Recherche hat Exception vorgeschlagen.
+# TODO: Was ist das? -> Nachschauen und einbauen
+if zahl1.isdigit() and zahl2.isdigit():
+    zahl1 = int(zahl1)
+    zahl2 = int(zahl2)
+else:
+    print("Bitte eine Ziffer eingeben und keinen Quatsch!")
+    # TODO: Wie erreichen wir eine erneute Eingabemöglichkeit?
+
 
 ergebnis = zahl1 + zahl2
 
